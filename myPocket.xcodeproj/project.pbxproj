@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		1031F3F5257D51D2004389A4 /* AddIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1031F3EF257D51D2004389A4 /* AddIncomeViewController.m */; };
 		1031F3FA257D51F1004389A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1031F3F8257D51F1004389A4 /* Main.storyboard */; };
 		1031F3FB257D51F1004389A4 /* Entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031F3F9257D51F1004389A4 /* Entries.swift */; };
+		1031F415257D5724004389A4 /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = 1031F414257D5724004389A4 /* FMDB */; };
+		1031F418257D5744004389A4 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1031F417257D5744004389A4 /* DBManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,7 @@
 		1031F3F1257D51D2004389A4 /* AddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItemViewController.h; sourceTree = "<group>"; };
 		1031F3F8257D51F1004389A4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1031F3F9257D51F1004389A4 /* Entries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entries.swift; sourceTree = "<group>"; };
+		1031F417257D5744004389A4 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1031F415257D5724004389A4 /* FMDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 				1031F3EE257D51D2004389A4 /* ListTableViewCell.m */,
 				1031F3ED257D51D2004389A4 /* ViewController.h */,
 				1031F3EB257D51D2004389A4 /* ViewController.m */,
+				1031F417257D5744004389A4 /* DBManager.swift */,
 				1031F3F9257D51F1004389A4 /* Entries.swift */,
 				1031F3F8257D51F1004389A4 /* Main.storyboard */,
 				1031F3DB257D4F8F004389A4 /* Assets.xcassets */,
@@ -105,6 +110,9 @@
 			dependencies = (
 			);
 			name = myPocket;
+			packageProductDependencies = (
+				1031F414257D5724004389A4 /* FMDB */,
+			);
 			productName = myPocket;
 			productReference = 1031F3CF257D4F8B004389A4 /* myPocket.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 1031F3C6257D4F8B004389A4;
+			packageReferences = (
+				1031F413257D5724004389A4 /* XCRemoteSwiftPackageReference "fmdb" */,
+			);
 			productRefGroup = 1031F3D0257D4F8B004389A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -163,6 +174,7 @@
 				1031F3D3257D4F8B004389A4 /* AppDelegate.swift in Sources */,
 				1031F3FB257D51F1004389A4 /* Entries.swift in Sources */,
 				1031F3F2257D51D2004389A4 /* AddItemViewController.m in Sources */,
+				1031F418257D5744004389A4 /* DBManager.swift in Sources */,
 				1031F3F3257D51D2004389A4 /* ViewController.m in Sources */,
 				1031F3D5257D4F8B004389A4 /* SceneDelegate.swift in Sources */,
 				1031F3F4257D51D2004389A4 /* ListTableViewCell.m in Sources */,
@@ -367,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1031F413257D5724004389A4 /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1031F414257D5724004389A4 /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1031F413257D5724004389A4 /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1031F3C7257D4F8B004389A4 /* Project object */;
 }

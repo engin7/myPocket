@@ -7,8 +7,9 @@
 
 import Foundation
  
-
-  class Entries {
-     
-    
-  }
+struct Entry {
+    var entryID: Int!
+    var type: Bool! //income true, expense false
+    var title: String!
+    var amount: Int!
+}
